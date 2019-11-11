@@ -1,0 +1,142 @@
+body,
+html {
+	height: 100%;
+	min-height: 100%;
+}
+body {
+	margin: 0;
+    font-family: 'Coda', cursive;
+}
+.container {
+	text-align: center;
+	background-image: url('../img/back.png');
+	min-height: 100%;
+}
+header {
+    padding: 15px;
+}
+header h1 {
+	margin: 0;
+}
+.score ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0 10px;
+    padding: 0;
+}
+.score {
+    margin: 5px 0;
+}
+.score ul li{
+    display: inline-block;
+    color: #00695c;
+}
+.restart {
+    margin: 0 0rem 0 6rem;
+    cursor: pointer;
+}
+.cards {
+	width: 650px;
+    margin: 0 auto;
+}
+.cards .deck {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 30px;
+    border-radius: 10px;
+    margin: 0 0 3em;
+    min-height: 580px;
+}
+.cards .deck .card {
+    background: #00695c;
+    height: 125px;
+    width: 125px;
+    color: #fff;
+    font-size: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    cursor: pointer;
+    transition: transform .8s;
+}
+.cards .deck .card.open {
+    background: #FF5722;
+    font-size: 50px;
+    transform:rotateY(180deg);
+}
+.cards .deck .card.done {
+    background: #FFC107;
+    font-size: 50px;
+    animation-name: shake;
+    animation-duration: .4s;
+}
+.disabled {
+  pointer-events: none;
+}
+@keyframes shake {
+  0% { transform: translate(1px, -1px) rotateY(180deg) ; }
+  10% { transform: translate(2px, -1px) rotateY(180deg) ; }
+  20% { transform: translate(3px, -1px) rotateY(180deg) ; }
+  30% { transform: translate(3px, 2px) rotateY(180deg) ; }
+  40% { transform: translate(-2px, 1px) rotateY(180deg) ; }
+  50% { transform: translate(1px, 2px) rotateY(180deg) ; }
+  60% { transform: translate(3px, -2px) rotateY(180deg) ; }
+  70% { transform: translate(3px, -4px) rotateY(180deg) ; }
+  80% { transform: translate(-2px, 1px) rotateY(180deg) ; }
+  90% { transform: translate(1px, 2px) rotateY(180deg) ; }
+  100% { transform: translate(1px, 2px) rotateY(180deg) ; }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  text-align: center;
+  display: none;
+}
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 5px;
+  width: 85%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+#play-again {
+  background-color: #141214;
+  padding: 0.7rem 1rem;
+  font-size: 1.1rem;
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  font-family: 'Gloria Hallelujah', cursive;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.starRating li {
+  display: inline-block;
+  color: #00695c;
+}
