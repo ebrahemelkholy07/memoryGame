@@ -140,3 +140,27 @@ header h1 {
   display: inline-block;
   color: #00695c;
 }
+@media (max-width: 767px) {
+  .cards {
+    width: 400px;
+  }
+  .cards .deck {
+    min-height: 370px;
+  }
+  .cards .deck .card {
+    height: 80px;
+    width: 80px;
+  }
+}
+@media (max-width: 399px) {
+  .cards {
+    width: 320px;
+  }
+  .cards .deck .card {
+    height: 60px;
+    width: 60px;
+  }
+  .cards .deck {
+    min-height: 280px;
+  }
+}

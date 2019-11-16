@@ -45,6 +45,7 @@ function flippingCards() {
     openedCard.push(this);
     var len = openedCard.length;
     this.classList.add('open');
+    this.classList.add('disabled');
     if (len == 2) {
         count();
         disable();
